@@ -1,0 +1,30 @@
+/* src/pages/NotFound.css */
+
+.not-found-container {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .not-found-container h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .not-found-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .home-link {
+    padding: 0.6em 1.2em;
+    background-color: #61dafb;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-link:hover {
+    background-color: #21a1f1;
+  }
+  
