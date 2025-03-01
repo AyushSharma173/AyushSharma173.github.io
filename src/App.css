@@ -1,4 +1,8 @@
 /* AyushSharma173.github.io/my-portfolio/src/App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body, html {
   margin: 0;
   padding: 0;
@@ -17,3 +21,4 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+

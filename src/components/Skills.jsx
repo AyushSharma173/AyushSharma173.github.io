@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Skills = () => {
-  const skills = ['React', 'Python', 'AWS', 'Git', 'Node.js'];
+  const skills = ['Full Stack Dev', 'React', 'Python', 'AWS', 'Git', 'Node.js', 'Databases', 'Physics', 'C++'];
 
   return (
     <section id="skills" style={{ padding: '2rem', textAlign: 'center' }}>
