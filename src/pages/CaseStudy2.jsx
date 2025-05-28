@@ -5,7 +5,7 @@ import './CaseStudy.css'; // Reuse the same CSS for consistency
 const CaseStudy2 = () => {
   return (
     <div className="case-study-container">
-      <header>
+      <header className="case-study-header">
         <h1>Constructing a Rigorous Quantum Circuit Simulator in Python</h1>
 
         <p className="repo-link">
@@ -20,8 +20,9 @@ const CaseStudy2 = () => {
         
       </header>
 
-      <section>
-          <h2>Live Demo</h2>
+      <section className="live-demo-section">
+          {/* <h2 className="text-white">Live Demo</h2> */}
+          <h2 className="case-study-heading">Live Demo</h2> 
           <p>
             To experience the simulator in real time, interact with the live demo below. I have deployed the
             Quantum Circuit Simulator as a web app, and you can try out the command-driven interface directly

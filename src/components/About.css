@@ -1,0 +1,55 @@
+/* About.css */
+
+.about-section {
+    background-color: #f1f5f9;      /* very light slate */
+    padding: 0.5rem 0.5rem;             /* vertical spacing */
+    scroll-margin-top: 5rem;        /* for anchor links */
+  }
+  
+  .about-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-heading {
+    position: relative;
+    display: inline-block;          /* shrink to text for underline */
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #334155;                 /* dark slate */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .about-heading::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50%;
+    background-color: #3b82f6;      /* accent blue */
+    margin: 0.5rem auto 0;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #475569;                 /* mid-tone slate */
+    margin: 0;                      /* reset default */
+  }
+  
+  /* Responsive tweak: left-align on wider screens */
+  @media (min-width: 768px) {
+    .about-container {
+      text-align: left;
+    }
+    .about-heading {
+      display: block;
+    }
+    .about-heading::after {
+      margin: 0.5rem 0 0 0;        /* align underline to heading start */
+    }
+  }
+  

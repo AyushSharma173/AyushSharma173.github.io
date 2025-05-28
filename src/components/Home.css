@@ -1,0 +1,78 @@
+.home-section {
+    position: relative;
+    width: 100%;
+    /* professional, muted blues */
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    padding: 4rem 1rem;        /* controls the total height */
+    box-sizing: border-box;
+  }
+  
+  .home-header {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .home-header h1 {
+    margin: 0;
+    font-size: 2.5rem;         /* big, but not full-screen huge */
+    font-weight: 700;
+    color: #F8FAFC;
+    letter-spacing: 0.05em;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .home-header p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #E2E8F0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+  }
+  
+
+
+  .home-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .home-nav-link {
+    background: none;
+    border: none;
+    color: #E2E8F0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  
+  .home-nav-link:hover {
+    color: #FFFFFF;
+  }
+  
+  .home-nav-link.active {
+    color: #FFFFFF;
+    border-color: #3B82F6;
+  }
+
+
+  .home-description {
+    max-width: 600px;
+    margin: 2rem auto 0;        /* space from nav, centered */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #CBD5E1;             /* softer light-blue/gray */
+    text-align: center;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    opacity: 0;                 /* we'll animate to 1 */
+    /* no extra background—blends into the hero */
+  }

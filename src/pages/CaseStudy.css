@@ -1,122 +1,126 @@
-/* Default (Dark Mode) Styles */
+/* src/pages/CaseStudy.css */
+
+/* 1. Container & typography */
 .case-study-container {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #334155;
   line-height: 1.6;
-  color: #ffffff !important; /* White text for dark mode */
 }
 
-.case-study-container h1 {
+/* 2. Header */
+.case-study-header {
   text-align: center;
-  margin-bottom: 0.5rem;
-  color: #ffffff !important; /* White for main heading */
+  margin-bottom: 2rem;
+}
+.case-study-header h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  color: #0f172a;
+}
+.case-study-header .date {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #64748b;
 }
 
-.date {
-  text-align: center;
-  color: #000000; /* Dates remain black */
-  margin-bottom: 1.5rem;
+/* 3. Sections */
+.case-study-content section {
+  margin-bottom: 2rem;
 }
-
-.case-study-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-
 .case-study-content h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  border-bottom: 3px solid #3b82f6;
+  padding-bottom: 0.25rem;
+}
+.case-study-content h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #ffffff !important;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.2rem;
 }
 
-.case-study-content h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  color: #ffffff !important;
-}
-
+/* 4. Text */
 .case-study-content p {
   margin-bottom: 1rem;
-  color: #ffffff !important;
-  opacity: 1 !important; /* Force full opacity */
+  font-size: 1rem;
 }
 
-.case-study-content ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-  color: #ffffff !important;
+/* 5. Lists */
+.case-study-content ul,
+.case-study-content ol {
+  margin: 0 0 1rem 1.5rem;
+}
+.case-study-content li {
+  margin-bottom: 0.5rem;
 }
 
-/* Code snippet styling */
-.case-study-content pre,
-.case-study-content code {
-  font-family: Consolas, Menlo, Monaco, 'Courier New', monospace;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-/* Enhanced pre styling for code blocks */
-.case-study-content pre {
-  background-color: #2d2d2d;  /* Dark background for code blocks */
-  color: #f8f8f2;             /* Light text color for code blocks */
-  padding: 1.5rem;
+/* 6. Code blocks */
+.code-block {
+  background: #f3f4f6;
+  padding: 1rem;
   border-radius: 6px;
   overflow-x: auto;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+}
+.code-block pre {
+  margin: 0;
+  white-space: pre-wrap;
 }
 
-/* Inline code styling */
-.case-study-content code {
-  background-color: #2d2d2d;
-  color: #f8f8f2;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
+/* 7. Images */
+.image-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+.image-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
 }
 
-.project-link {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.6em 1.2em;
-  background-color: #61dafb !important;
-  color: #fff !important;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.project-link:hover {
-  background-color: #21a1f1 !important;
-}
-
-/* Light Mode Adjustments */
-@media (prefers-color-scheme: light) {
+/* 8. Dark mode */
+@media (prefers-color-scheme: dark) {
   .case-study-container {
-    color: #000000 !important; /* Dark text on light backgrounds */
+    background: #0f172a;
+    color: #e2e8f0;
   }
-  .case-study-container h1 {
-    color: #000000 !important;
-  }
+  .case-study-header h1,
   .case-study-content h2,
-  .case-study-content h3,
-  .case-study-content p,
-  .case-study-content ul {
-    color: #000000 !important;
+  .case-study-content h3 {
+    color: #f1f5f9;
   }
-  /* Optional: Adjust code blocks and inline code for light mode */
-  .case-study-content pre {
-    background-color: #f4f4f4;
-    color: #333333;
+  .case-study-header .date,
+  .image-caption {
+    color: #94a3b8;
   }
-  .case-study-content code {
-    background-color: #f4f4f4;
-    color: #333333;
+  .code-block {
+    background: #334155;
   }
+}
+
+
+
+.case-study-heading {
+  color: black; /* Changed from white to black */
+}
+
+.live-demo-section {
+  background-color: white; /* Sets the background to white */
+  padding: 40px; /* Add some padding around the content inside the section */
+  margin-bottom: 20px; /* Add some space below this section */
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); /* Optional: subtle shadow for definition */
+  color: black; /* Set all text inside this section to black */
 }

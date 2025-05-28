@@ -1,7 +1,4 @@
 /* AyushSharma173.github.io/my-portfolio/src/App.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body, html {
   margin: 0;
@@ -22,3 +19,23 @@ body {
   min-height: 100vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* remove any @tailwind imports if you’re not using Tailwind */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* ← apply the same gradient you used in Home.css */
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #ECEFF4;                /* optional: light default text */
+  scroll-behavior: smooth;
+
+}
+
+
+#root, .App {
+  min-height: 100vh;
+}

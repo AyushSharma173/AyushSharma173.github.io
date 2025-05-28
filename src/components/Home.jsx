@@ -1,41 +1,71 @@
-import React from "react";
-import { motion } from "framer-motion";
+// src/components/Home.jsx
+import React from 'react';
+import './Home.css';
+import { motion } from 'framer-motion';
 
-const Home = () => {
-  return (
-    <section className="w-full h-screen flex text-center flex-col items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-center px-6">
-      
-      <motion.h1
+const Home = ({ activeTab, onTabChange }) => (
+  <section className="home-section" id="home">
+    <header className="home-header">
+    <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-5xl md:text-6xl text-center font-bold"
       >
-        Ayush Sharma
+      Ayush Sharma
       </motion.h1>
 
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full mx-auto text-xl text-center md:text-2xl font-light mt-6"
       >
         Creator | Indie Hacker | Full-Stack Developer
       </motion.p>
 
 
 
-      {/* <motion.p
+      {/* Inline “About” blurb */}
+      <motion.p
+        className="home-description"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="text-lg md:text-xl text-center text-gray-200 mt-4"
+        transition={{ duration: 0.6, delay: 0.4 }}
       >
-        Innovating at the intersection of technology and creativity.
-      </motion.p> */}
-      
-    </section>
-  );
-};
+        I’m Ayush—a passionate software engineer who builds elegant, performant web apps in React &amp; Python.
+        I love turning complex problems into delightful user experiences and exploring the latest in ML/AI.
+      </motion.p>
+
+
+      <nav className="home-nav">
+        <button
+          className={`home-nav-link ${activeTab==='projects' ? 'active' : ''}`}
+          onClick={() => onTabChange('projects')}
+        >
+          Projects
+        </button>
+        <button
+          className={`home-nav-link ${activeTab==='blog' ? 'active' : ''}`}
+          onClick={() => onTabChange('blog')}
+        >
+          Blog
+        </button>
+          <button
+            className={`home-nav-link ${activeTab==='work' ? 'active' : ''}`}
+            onClick={() => onTabChange('work')}
+          >
+            Work Experience
+          </button>
+          <button
+            className={`home-nav-link ${activeTab==='papers' ? 'active' : ''}`}
+            onClick={() => onTabChange('papers')}
+          >
+            Papers
+          </button>
+      </nav>
+
+
+    </header>
+  </section>
+);
 
 export default Home;
