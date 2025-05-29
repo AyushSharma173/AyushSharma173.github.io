@@ -1,69 +1,93 @@
 /* src/pages/Papers_.css */
 .papers-section {
+  color: white;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  .papers-grid {
+}
+
+.papers-section h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.papers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
-  }
-  .paper-card {
-    position: relative;    /* ← add this */
+}
+.paper-card {
+    position: relative;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
-  }
-  .paper-card:hover {
+}
+.paper-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  .paper-thumbnail {
+}
+.paper-thumbnail {
     width: 100%;
     height: 200px;
-    background: #f5f5f5;
+    background: #e0e0e0;  /* Darker background */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-  }
-  .paper-thumbnail img {
+}
+.paper-thumbnail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);  /* Dark overlay */
+    z-index: 1;
+}
+.paper-thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .paper-thumbnail .pdf-icon {
+    position: relative;
+    z-index: 0;
+}
+.paper-thumbnail .pdf-icon {
     font-size: 48px;
     color: #e74c3c;
-  }
-  .paper-info {
+    position: relative;
+    z-index: 2;  /* Keep icon above the overlay */
+}
+.paper-info {
     padding: 1.5rem;
-  }
-  .paper-title {
+}
+.paper-title {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: #2c3e50;
-  }
-  .paper-description {
+}
+.paper-description {
     color: #666;
     font-size: 0.9rem;
     margin-bottom: 1rem;
-  }
-  .paper-actions {
+}
+.paper-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
     background: #f8f9fa;
     border-top: 1px solid #eee;
-  }
-  .paper-actions button {
+}
+.paper-actions button {
     background: #1e90ff;
     color: white;
     border: none;
@@ -72,11 +96,11 @@
     cursor: pointer;
     font-size: 0.9rem;
     transition: background 0.2s;
-  }
-  .paper-actions button:hover {
+}
+.paper-actions button:hover {
     background: #187bcd;
-  }
-  .paper-actions a {
+}
+.paper-actions a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -91,20 +115,20 @@
     color: #1e90ff;
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
-  }
-  .paper-actions a:hover {
+}
+.paper-actions a:hover {
     background: rgba(30, 144, 255, 0.2);
     color: #187bcd;
-  }
+}
 
-  /* If you want the icon itself to grow: */
-  .paper-actions a .download-icon {
+/* If you want the icon itself to grow: */
+.paper-actions a .download-icon {
     font-size: 1.8em;  /* bump the emoji or svg */
     line-height: 1;
-  }
+}
 
-  /* Modal styles */
-  .modal-overlay {
+/* Modal styles */
+.modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -115,8 +139,8 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
-  .modal-content {
+}
+.modal-content {
     background: white;
     border-radius: 12px;
     width: 90%;
@@ -125,48 +149,48 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-  }
-  .modal-header {
+}
+.modal-header {
     padding: 1rem;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .modal-header h3 {
+}
+.modal-header h3 {
     margin: 0;
     color: #2c3e50;
-  }
-  .modal-close {
+}
+.modal-close {
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
     color: #666;
     padding: 0.5rem;
-  }
-  .modal-body {
+}
+.modal-body {
     flex: 1;
     overflow: auto;
     padding: 1rem;
-  }
-  .pdf-viewer {
+}
+.pdf-viewer {
     width: 100%;
     height: 100%;
     min-height: 500px;
     border: 1px solid #eee;
     border-radius: 8px;
-  }
-  .pdf-viewer .react-pdf__Document {
+}
+.pdf-viewer .react-pdf__Document {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .pdf-viewer .react-pdf__Page {
+}
+.pdf-viewer .react-pdf__Page {
     margin: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .pdf-controls {
+}
+.pdf-controls {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,8 +198,8 @@
     padding: 1rem;
     background: #f8f9fa;
     border-top: 1px solid #eee;
-  }
-  .pdf-controls button {
+}
+.pdf-controls button {
     background: #1e90ff;
     color: white;
     border: none;
@@ -184,32 +208,32 @@
     cursor: pointer;
     font-size: 0.9rem;
     transition: background 0.2s;
-  }
-  .pdf-controls button:disabled {
+}
+.pdf-controls button:disabled {
     background: #ccc;
     cursor: not-allowed;
-  }
-  .pdf-controls span {
+}
+.pdf-controls span {
     color: #666;
     font-size: 0.9rem;
-  }
-  .loading-state {
+}
+.loading-state {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
     color: #666;
-  }
-  .error-state {
+}
+.error-state {
     color: #e74c3c;
     text-align: center;
     padding: 2rem;
-  }
+}
   
 
 
-  .github-link {
+.github-link {
     position: absolute;
     top: 12px;                /* slide it down a bit */
     right: 12px;              /* and in from the right */
@@ -224,27 +248,31 @@
     padding: 6px 8px;         /* more comfortable click area */
   
     /* Stronger visual treatment */
-    background: rgba(33, 33, 33, 0.05);
+    background: rgb(0, 0, 0);
     border-radius: 6px;
-    color: #333;              /* darker grey for contrast */
-    opacity: 0.9;
+    color: #ffffff;              /* darker grey for contrast */
+    opacity: 1.0;
   
     transition: opacity 0.2s, background 0.2s;
-  }
+}
   
-  .github-link:hover {
+.github-link:hover {
     opacity: 1;
     background: rgba(33, 33, 33, 0.1);
-  }
+}
   
-  .github-link svg {
+.github-link svg {
     width: 40px;              /* larger icon */
     height: 20px;
     fill: currentColor;
-  }
+}
   
-  .github-link span {
+.github-link span {
     line-height: 1;
     font-weight: 700;         /* a bit bolder */
-  }
+}
+  
+.paper-card:hover .paper-thumbnail {
+    opacity: 1;
+}
   

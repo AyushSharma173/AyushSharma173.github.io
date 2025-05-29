@@ -5,58 +5,74 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #334155;
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: -0.011em;
 }
 
 /* 2. Header */
 .case-study-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 .case-study-header h1 {
   margin: 0;
-  font-size: 2.25rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
   color: #0f172a;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 .case-study-header .date {
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   color: #64748b;
+  font-weight: 500;
 }
 
 /* 3. Sections */
 .case-study-content section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 .case-study-content h2 {
-  font-size: 1.75rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.875rem;
   color: #0f172a;
-  margin-bottom: 0.75rem;
-  border-bottom: 3px solid #3b82f6;
-  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 .case-study-content h3 {
-  font-size: 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.375rem;
   color: #0f172a;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 /* 4. Text */
 .case-study-content p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
 /* 5. Lists */
 .case-study-content ul,
 .case-study-content ol {
-  margin: 0 0 1rem 1.5rem;
+  margin: 0 0 1.5rem 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
 }
 .case-study-content li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* 6. Code blocks */
@@ -110,8 +126,6 @@
   }
 }
 
-
-
 .case-study-heading {
   color: black; /* Changed from white to black */
 }
@@ -124,3 +138,6 @@
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); /* Optional: subtle shadow for definition */
   color: black; /* Set all text inside this section to black */
 }
+
+/* Add this to your HTML head or import in your main CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap');

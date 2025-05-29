@@ -1,5 +1,7 @@
+// AyushSharma173.github.io/src/components/CaseStudies.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './CaseStudies.css';
 
 const DEFAULT_IMAGE = '/assets/default-project.jpg';
@@ -15,7 +17,7 @@ const caseStudiesData = [
   {
     title: 'Quantum Circuit Simulator in Python',
     date: 'Feb 4, 2025',
-    summary: `Built a matrix-free simulator for Grover’s search and QFT, letting users experiment with quantum algorithms in pure Python.`,
+    summary: `Built a matrix-free simulator for Grover's search and QFT, letting users experiment with quantum algorithms in pure Python.`,
     image: '/assets/quantum-simulator.jpg',
     link: '/case-studies/quantum-circuit-simulator'
   },
@@ -33,13 +35,22 @@ const caseStudiesData = [
     image: '/assets/realestate.jpg',
     link: '/case-studies/realestate-pricing'
   },
+  { 
+    title: 'FedAdapt: Adaptive FL Framework',
+    date:  'Jan 2025',
+    summary: `My new FedAdapt library…`,
+    image: '/papers/fedadapt_thumbnail.jpg',
+    goToPapers: true       // ← flag this one as "jump to papers"
+  },
+
 ];
 
-const CaseStudies = () => (
+const CaseStudies = ({ onTabChange = () => {} }) => (
   <section id="case-studies" className="case-studies-section">
     <h2 className="case-studies-heading">Featured Projects</h2>
     <div className="case-studies-wrapper">
       {caseStudiesData.map((study, i) => (
+        
         <article key={i} className="case-study">
           <div className="case-study-image-wrapper">
             <img
@@ -56,11 +67,27 @@ const CaseStudies = () => (
             <Link to={study.link} className="case-study-link">
               Read More →
             </Link>
+
+            {study.goToPapers
+            ? <button
+            className="case-study-link as-button"
+            onClick={() => onTabChange('papers')}
+            >
+              View Paper
+              </button>
+              : <Link to={study.link} className="case-study-link">
+              Read More
+              </Link>
+            }
           </div>
         </article>
       ))}
     </div>
   </section>
 );
+
+CaseStudies.propTypes = {
+  onTabChange: PropTypes.func
+};
 
 export default CaseStudies;

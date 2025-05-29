@@ -43,26 +43,28 @@ const CaseStudy2 = () => {
         <section>
           <h2>Introduction</h2>
           <p>
-            Quantum computing stands at the intersection of physics, mathematics, and computer science, offering
-            profoundly different computational capabilities compared to classical systems. The core objective of
-            this project was to engineer a versatile Quantum Circuit Simulator in Python—capable of reading
-            high-level circuit commands and accurately evolving quantum states via matrix-free operations.
+          Quantum computing exists where physics meets mathematics and computer science to provide computational abilities beyond classical systems. The main goal of this project involved developing a flexible Quantum Circuit Simulator in Python which both interprets high-level circuit commands and performs precise quantum state evolution through matrix-free operations.
+
           </p>
           <p>
-            Drawing inspiration from IBM’s Quantum Experience, my implementation supports a wide range of quantum
-            gates, including those essential to many prominent algorithms (e.g., Grover’s search and Shor’s algorithm).
+            The implementation draws its inspiration from IBM’s Quantum Experience and supports various quantum gates which are important for prominent algorithms (e.g., Grover’s search and Shor’s algorithm).
             This simulator provides a robust educational platform for exploring advanced concepts such as entanglement,
             phase estimation, and the Quantum Fourier Transform (QFT).
+
           </p>
         </section>
 
         <section>
           <h2>Parsing and Command Processing</h2>
           <p>
-            The simulator’s backbone is a command interpreter that translates textual instructions into actual
+            {/* The simulator’s backbone is a command interpreter that translates textual instructions into actual
             quantum operations on a state vector. Users can declare an initial number of qubits with <code>init</code>,
             apply fundamental gates like <code>h</code>, <code>x</code>, and <code>z</code>, and also perform
+            multi-qubit operations such as controlled-NOT (<code>cx</code>) or phase shifts (<code>csk</code>). */}
+            The simulator operates through a command interpreter which converts textual commands into actual quantum operations on state vectors. Users can declare an initial number of qubits with <code>init</code>,
+            apply fundamental gates like <code>h</code>, <code>x</code>, and <code>z</code>, and also perform
             multi-qubit operations such as controlled-NOT (<code>cx</code>) or phase shifts (<code>csk</code>).
+
           </p>
           <p>
             A pivotal design decision was to allow compact notation for specifying gate application to qubit
@@ -200,7 +202,7 @@ def DFT(n_qbits, qbit_i, qbit_f, type, A):
             tool, empowering users to rapidly prototype and analyze quantum circuits.
           </p>
         </section>
-
+{/* 
         <section>
           <h2>Looking Ahead: Future Enhancements</h2>
           <p>
@@ -229,7 +231,31 @@ def DFT(n_qbits, qbit_i, qbit_f, type, A):
               run the same circuit on both this simulator and actual quantum hardware.
             </li>
           </ul>
+        </section> */}
+
+          <section>
+          <h2>Looking Ahead: Future Enhancements</h2>
+          <p>
+            The simulator provides a wide range of quantum gates including Pauli, Hadamard, phase gates and controlled operations and QFT but there are several ways to improve it:
+          </p>
+          <ul>
+            <li>
+              <strong>Numba and GPU Acceleration:</strong> Earlier versions included partial <code>numba</code>
+              acceleration. The speed of multi-qubit circuits would increase significantly if critical loops were migrated to a GPU (e.g., via <code>CuPy</code>) or if optimized JIT compilation was reinstated.
+            </li>
+            <li>
+              <strong>Error and Noise Modeling:</strong> Real quantum computers are susceptible to gate
+              errors, decoherence, and crosstalk. The simulator would become more realistic of physical hardware constraints if it included these noise channels (e.g., amplitude damping or depolarizing noise).
+            </li>
+            <li>
+              <strong>Parametric Circuits and Variational Algorithms:</strong> The command interface should be extended to handle parameterized gates (like <code>RX(&theta;)</code>, <code>RZ(&phi;)</code>) to simulate variational quantum algorithms (VQAs) which are important in near-term quantum devices.
+            </li>
+            <li>
+              <strong>Integration with External Toolkits:</strong> A bridge to existing quantum frameworks (like Qiskit or Cirq) would allow users to cross-validate results and run the same circuit on this simulator and actual quantum hardware.
+            </li>
+          </ul>
         </section>
+
 
 
       </article>
