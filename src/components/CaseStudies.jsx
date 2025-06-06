@@ -18,7 +18,7 @@ const caseStudiesData = [
 
   { 
     title: 'CodeSage: Retrieval-Augmented Code Reasoning',
-    date:  'June 2025',
+    date:  'May 2025',
     summary: `CodeSage builds a graph-based context retrieval engine using Neo4j + Qdrant + OpenAI to answer natural-language questions about any Python repo.`,
     image: '/assets/codesage_thumbnail.jpg',
     goToPapers: true
