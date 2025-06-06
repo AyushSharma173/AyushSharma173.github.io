@@ -1,0 +1,174 @@
+/* src/components/WorkExperience.css */
+
+.work-experience-section {
+    padding: 20px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #1A202C; /* Main Dark Blue-Gray Background */
+    color: #E2E8F0; /* Primary Text Color */
+    border-radius: 12px; /* Slightly rounded corners for the section */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Subtle dark shadow */
+  }
+  
+  .work-experience-heading {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #F7FAFC; /* Heading Text Color */
+    position: relative;
+    font-weight: 600;
+  }
+  
+  .work-experience-heading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #63B3ED; /* Accent Blue */
+    margin: 8px auto 0;
+    border-radius: 2px;
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    margin-left: 20px;
+  }
+  
+  /* The vertical line */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background: #4A5568; /* Vertical Line Color */
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 30px;
+  }
+  
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    top: 5px;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    background: #63B3ED; /* Accent Blue Dot */
+    border: 3px solid #1A202C; /* Dot Border (same as section background) */
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    background: #2D3748; /* Content Box Background */
+    padding: 15px; /* Slightly increased padding for content boxes to feel contained */
+    position: relative;
+    width: 100%;
+    border-radius: 8px; /* Slightly rounded corners for content boxes */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Removed specific arrow styles and alternating positioning */
+  .timeline-content::before,
+  .timeline-content::after {
+    display: none;
+  }
+  
+  .experience-title {
+    font-size: 1.35em;
+    color: #F7FAFC; /* Heading Text Color */
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  
+  .experience-company-location {
+    font-size: 0.95em;
+    color: #A0AEC0; /* Secondary Text Color */
+    margin-bottom: 2px;
+  }
+  
+  .experience-dates {
+    font-size: 0.8em;
+    color: #A0AEC0; /* Secondary Text Color */
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+  
+  .experience-description {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+    color: #E2E8F0; /* Primary Text Color */
+    line-height: 1.4;
+  }
+  
+  .experience-description li {
+    margin-bottom: 4px;
+    font-size: 0.9em;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .work-experience-section {
+      padding: 15px 15px;
+      border-radius: 0; /* Remove border-radius on small screens for full width look */
+      box-shadow: none; /* Remove shadow on mobile for simplicity */
+    }
+  
+    .work-experience-heading {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+  
+    .timeline {
+      margin-left: 0;
+    }
+  
+    .timeline::before {
+      left: 20px;
+    }
+  
+    .timeline-dot {
+      left: 11px;
+      top: 5px;
+    }
+  
+    .timeline-item {
+      padding-left: 40px;
+      margin-bottom: 20px;
+    }
+  
+    .timeline-content {
+      width: auto;
+      padding: 10px; /* Adjust padding for content on mobile */
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Lighter shadow on mobile */
+    }
+  
+    .experience-title {
+      font-size: 1.25em;
+    }
+  
+    .experience-company-location {
+      font-size: 0.9em;
+    }
+  
+    .experience-dates {
+      font-size: 0.75em;
+    }
+  
+    .experience-description li {
+      font-size: 0.85em;
+    }
+  }

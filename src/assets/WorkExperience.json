@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "title": "Research Assistant",
+    "company": "Department of Computer Science, University of Illinois at Urbana-Champaign",
+    "location": "Urbana, IL",
+    "dates": "Aug 2024 - May 2025",
+    "description": [
+      "Authored FedAdapt—an open-source adaptive federated learning framework built on FedScale—that implements dynamic client personalization (α-mixing), heterogeneity-aware co-optimization, and a real-time monitoring dashboard. (https://github.com/AyushSharma173/FedAdapt)",
+      "Developed CodeSage—an open-source graph-aware RAG framework for codebases—combining vector search (Qdrant), symbolic graph traversal (Neo4j), and LLM summarization to answer natural language questions over Python repos.",
+      "Implemented a custom AST-based graph builder and retrieval engine with sub-2s latency, low token usage, and real-time querying via a React + FastAPI interface. (https://github.com/AyushSharma173/CodeSage)"
+    ]
+
+  },
+  {
+    "id": 2,
+    "title": "Founding Engineer",
+    "company": "PennyMeal",
+    "company_url": "https://pennymeal.com/",
+    "location": "Remote",
+    "dates": "Jan 2024 - Jan 2025",
+    "description": [
+      "Bootstrapped an AI-powered grocery & meal-planning platform that scraped real-time prices from 12,000 stores, used retrieval-augmented agents to build nutrition-aware meal plans (diet, prep-time, budget constraints), and let users order via an Instacart API integration; reached 2,500 sign-ups in the first week and ~5 K MAU after a Product Hunt launch.",
+      "Designed the end-to-end stack: Next.js + React front-end, Node/Express microservices, serverless AWS (Lambda, DynamoDB, S3) plus Qdrant vector DB for recipe/ingredient search; achieved sub-600 ms price-query latency with async workers and AWS EventBridge.",
+      "Built an automated pipeline that matches retailer discounts to recipe ingredients, delivering up-to-35 % cheaper carts on average; A/B tests drove a 19 % lift in weekly retention.",
+      "Raised $20 K in credits/funding through NVIDIA Inception and won 3rd place ($15 K) in UChicago Booth’s College New Venture Competition; ultimately paused growth when two-sided marketplace (chefs ↔ shoppers) required capital and headcount beyond a solo founder."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Research Assistant",
+    "company": "Jain Lab | School of Chemical Sciences, University of Illinois at Urbana-Champaign",
+    "location": "Urbana, IL",
+    "dates": "Jan 2024 - May 2024",
+    "description": [
+      "Developed a physics-informed ML surrogate to predict optical properties (absorption/reflectance spectra) of photonic materials by combining DFT simulation data with experimental measurements, achieving <3% MAE versus high-fidelity benchmarks.",
+      "Implemented a two‐stage, multi‐fidelity training pipeline: pre-trained on extensive DFT‐generated datasets for semiconductors (Si, GaAs) and metal oxides (TiO₂, ZnO), then fine‐tuned on limited experimental spectra to correct systematic biases.",
+      "Embedded physical constraints—Maxwell’s equations (zero divergence in free space) and energy conservation—into custom TensorFlow loss functions, ensuring all predictions remained electromagnetically consistent under unseen conditions.",
+      "Designed and trained a feed-forward neural network (input: material descriptors including composition, lattice constants, defect/dopant levels; output: nonnegative spectral intensities over 200–1000 nm) using GPU-accelerated TensorFlow/Keras with auto-differentiated physics penalties.",
+      "Assisted the Jain Lab in setting up and calibrating spectroscopy experiments: aligned laser sources and detectors on the optical bench, tuned pump–probe timing for ultrafast dynamics, and maintained nonlinear optics detectors to guarantee reproducible measurements."
+    ]
+
+  },
+  {
+    "id": 3,
+    "title": "Computational Materials Researcher Assistant",
+    "company": "Center for Advanced Theory and Molecular Simulations",
+    "location": "Champaign, IL",
+    "dates": "Aug 2023 - Jan 2024",
+    "description": [
+      "Led LAMMPS-based MD and MS simulations to investigate the brittle-to-ductile transition in B2 NiAl, building a detailed atomistic model to track dislocation behavior across temperature ranges.",
+      "Constructed simulation cells with periodic boundary conditions, inserted edge dislocations via Burgers‐vector displacement fields, and relaxed cores using the EAM potential optimized for NiAl (accurately reproducing lattice constants, elastic moduli, and defect energies).",
+      "Developed Python scripts to automate input generation, data extraction, and post-processing—calculating dislocation mobility, stress–strain responses, and plotting Maxwell‐equation residuals for physical consistency checks.",
+      "Analyzed dislocation core structures using differential displacement mapping and visualization tools to identify core splitting and kink-pair formation, correlating these features with observed ductility at elevated temperatures.",
+      "Quantified the critical resolved shear stress for dislocation motion at multiple temperatures, demonstrating that thermal activation (kink nucleation and climb) reduces flow stress and marks the brittle-to-ductile transition.",
+      "Validated simulation results against experimental benchmarks and theoretical models by comparing transition temperatures, critical stresses, and core geometries; performed finite-size studies to confirm negligible boundary artifacts."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Founder",
+    "company": "Demeter",
+    "location": "Chicago, IL",
+    "dates": "Dec 2022 - May 2023",
+    "description": [
+      "Launched a fintech platform connecting farmers and lenders with a full-stack solution (Python, React, Node.js, AWS) to improve agricultural financial accessibility.",
+      "Developed AI models that fuse satellite imagery, land productivity, weather, and financial data to generate dynamic farmer credit reports, enabling more accurate lending decisions.",
+      "Secured third place ($10,000) at University of Chicago's Booth School of Business Venture Challenge for AI-driven credit scoring, validating the platform’s market potential and impact."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Data Science Intern",
+    "company": "AGCO",
+    "location": "Champaign, IL",
+    "dates": "May 2022 - Aug 2022",
+    "description": [
+      "Built an iOS app using IoT sensors and TensorFlow Lite to collect real-time agricultural data for precision farming.",
+      "Integrated AWS IoT Core and S3 to securely stream and store sensor data for analytics and model updates.",
+      "Implemented on-device ML to detect anomalies (e.g., drought stress) and deliver timely recommendations to farmers."
+    ]
+  },
+
+  {
+    "id": 6,
+    "title": "Software Developer",
+    "company": "Holonyak Micro & Nanotechnology Lab",
+    "location": "Champaign, IL",
+    "dates": "Oct 2021 - Jan 2022",
+    "description": [
+      "Developed a web-based educational game using OpenGL, iOS SDK, and Java to simplify PID controller concepts for students."
+    ]
+  },
+
+  {
+    "id": 7,
+    "title": "Software Developer",
+    "company": "Coordinated Science Lab",
+    "location": "Champaign, IL",
+    "dates": "Jun 2021 - Aug 2021",
+    "description": [
+      "Developed a sensor-actuator system using AWS SageMaker, LabVIEW, and JavaScript to mitigate facial pressure ulcers from ventilation masks."
+    ]
+  }
+
+]

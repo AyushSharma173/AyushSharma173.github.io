@@ -16,8 +16,15 @@ const papers = [
     title: "FedAdapt: Adaptive Federated Learning for Heterogeneous Data",
     description: "A novel approach to federated learning that adapts to heterogeneous data distributions across clients.",
     pdfUrl: '/papers/fedadapt_paper.pdf'
+  },
+  {
+    id: 2,
+    title: "CodeSage: Retrieval‑Augmented Code Reasoning with Graph Traversal + LLMs",
+    description: "An open-source system for building and querying code graphs using Neo4j, Qdrant, and OpenAI, optimized for retrieval quality and research experimentation.",
+    pdfUrl: 'http://paper.codesage.com.s3-website.us-east-2.amazonaws.com/', // external
+    externalViewerUrl: 'http://paper.codesage.com.s3-website.us-east-2.amazonaws.com/',
+    githubUrl: 'https://github.com/AyushSharma173/CodeSage?tab=readme-ov-file'
   }
-  // Add more papers here as needed
 ]
 
 const PDFViewer = ({ pdfUrl, onClose }) => {
@@ -199,7 +206,7 @@ const PDFViewer = ({ pdfUrl, onClose }) => {
 // }
 
 const PaperCard = ({ paper }) => {
-  const externalViewerUrl = 'http://paper.fedadapt.com.s3-website.us-east-2.amazonaws.com/'
+  const externalViewerUrl = paper.externalViewerUrl || paper.pdfUrl
 
   const handleCardClick = () => {
     window.open(externalViewerUrl, '_blank')
@@ -209,7 +216,7 @@ const PaperCard = ({ paper }) => {
     <div className="paper-card" onClick={handleCardClick}>
       {/* View on GitHub - prevent redirect */}
       <a
-        href="https://github.com/AyushSharma173/FedAdapt"
+        href={paper.githubUrl || "https://github.com"}
         target="_blank"
         rel="noopener noreferrer"
         className="github-link"

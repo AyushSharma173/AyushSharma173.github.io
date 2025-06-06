@@ -19,7 +19,7 @@ const Home = ({ activeTab, onTabChange }) => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Creator | Indie Hacker | Full-Stack Developer
+        Forward Deployed AI Engineer | End-to-End LLM Workflows
       </motion.p>
 
 
@@ -31,8 +31,10 @@ const Home = ({ activeTab, onTabChange }) => (
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        I’m Ayush—a passionate software engineer who builds elegant, performant web apps in React &amp; Python.
-        I love turning complex problems into delightful user experiences and exploring the latest in ML/AI.
+      {/* I architect and ship end-to-end GenAI solutions: from scalable data pipelines and high-throughput LLM inference stacks to user-facing dashboards.  
+      My toolkit spans Python, C++, Kubernetes, and React, all aimed at solving real-world problems at scale. */}
+
+
       </motion.p>
 
 

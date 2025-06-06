@@ -5,7 +5,7 @@ import './CaseStudy.css';
 const CaseStudy3 = () => {
   return (
     <div className="case-study-container">
-      <header>
+      <header className="case-study-header">
         <h1>How PennyMeal Came to Life: My Quest to Eat Better on a Student Budget</h1>
         {/* <p className="date">February 4, 2025</p> */}
       </header>

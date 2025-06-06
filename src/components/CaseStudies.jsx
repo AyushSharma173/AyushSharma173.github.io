@@ -7,6 +7,23 @@ import './CaseStudies.css';
 const DEFAULT_IMAGE = '/assets/default-project.jpg';
 
 const caseStudiesData = [
+
+  { 
+    title: 'FedAdapt: Adaptive FL Framework',
+    date:  'Jan 2025',
+    summary: `FedAdapt adds live dashboard, α-mix personalization, and device-aware co-optimization, cutting federated-learning convergence time by 30%.`,
+    image: '/papers/fedadapt_thumbnail.jpg',
+    goToPapers: true 
+  },
+
+  { 
+    title: 'CodeSage: Retrieval-Augmented Code Reasoning',
+    date:  'June 2025',
+    summary: `CodeSage builds a graph-based context retrieval engine using Neo4j + Qdrant + OpenAI to answer natural-language questions about any Python repo.`,
+    image: '/assets/codesage_thumbnail.jpg',
+    goToPapers: true
+  },
+
   {
     title: 'Quantamental Volatility Surface Forecasting',
     date: 'Aug 15, 2025',
@@ -23,7 +40,7 @@ const caseStudiesData = [
   },
   {
     title: 'AI-Powered Meal & Nutrition Tracking',
-    date: 'Jun 5, 2025',
+    date: 'Jun 5, 2024',
     summary: `A smart nutrition tracker that uses computer vision to log meals and suggest balanced plans—making healthy eating effortless.`,
     image: '/assets/pennymeal.jpg',
     link: '/case-studies/pennymeal'
@@ -35,13 +52,7 @@ const caseStudiesData = [
     image: '/assets/realestate.jpg',
     link: '/case-studies/realestate-pricing'
   },
-  { 
-    title: 'FedAdapt: Adaptive FL Framework',
-    date:  'Jan 2025',
-    summary: `My new FedAdapt library…`,
-    image: '/papers/fedadapt_thumbnail.jpg',
-    goToPapers: true       // ← flag this one as "jump to papers"
-  },
+
 
 ];
 
@@ -64,21 +75,18 @@ const CaseStudies = ({ onTabChange = () => {} }) => (
             <h3>{study.title}</h3>
             <small className="case-study-date">{study.date}</small>
             <p className="case-study-summary">{study.summary}</p>
-            <Link to={study.link} className="case-study-link">
-              Read More →
-            </Link>
-
-            {study.goToPapers
-            ? <button
-            className="case-study-link as-button"
-            onClick={() => onTabChange('papers')}
-            >
-              View Paper
-              </button>
-              : <Link to={study.link} className="case-study-link">
-              Read More
-              </Link>
-            }
+            {study.goToPapers ? (
+  <button
+    className="case-study-link as-button"
+    onClick={() => onTabChange('papers')}
+  >
+    View Paper
+  </button>
+) : (
+  <Link to={study.link} className="case-study-link">
+    Read More →
+  </Link>
+)}
           </div>
         </article>
       ))}

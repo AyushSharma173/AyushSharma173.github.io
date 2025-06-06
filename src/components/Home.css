@@ -1,3 +1,4 @@
+/* AyushSharma173.github.io/src/components/Home.css */
 .home-section {
     position: relative;
     width: 100%;
@@ -8,7 +9,7 @@
   }
   
   .home-header {
-    max-width: 600px;
+    /* max-width: 600px; */
     margin: 0 auto;
     text-align: center;
   }
@@ -66,13 +67,23 @@
 
 
   .home-description {
-    max-width: 600px;
+    /* max-width: 800px; */
     margin: 2rem auto 0;        /* space from nav, centered */
     font-size: 1rem;
     line-height: 1.6;
     color: #CBD5E1;             /* softer light-blue/gray */
-    text-align: center;
+    text-align: left;
     font-family: 'Segoe UI', Roboto, sans-serif;
     opacity: 0;                 /* we'll animate to 1 */
+    width: min(80%, 900px);
     /* no extra background—blends into the hero */
   }
+
+/* Only expand on desktop */
+@media (min-width: 1024px) {
+  .home-header,
+  .home-description {
+    max-width: 900px;
+    padding: 0 2rem;
+  }
+}
