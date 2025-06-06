@@ -140,3 +140,12 @@
     color: #e2e8f0;
   }
 }
+
+
+/* TEMP patch – drop this at the end of CaseStudy.css just to verify */
+@media (prefers-color-scheme: light) {
+  .case-study-container { background:#fff; color:#334155; }
+  .case-study-header h1,
+  .case-study-content h2,
+  .case-study-content h3 { color:#0f172a; }
+}
