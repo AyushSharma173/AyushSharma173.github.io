@@ -58,7 +58,7 @@ const caseStudiesData = [
 
 const CaseStudies = ({ onTabChange = () => {} }) => (
   <section id="case-studies" className="case-studies-section">
-    <h2 className="case-studies-heading">Featured Projects</h2>
+    <h2 className="case-studies-heading">Recent Projects</h2>
     <div className="case-studies-wrapper">
       {caseStudiesData.map((study, i) => (
         
